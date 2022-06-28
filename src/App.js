@@ -5,8 +5,8 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Register from './components/Register';
 import Login from './components/Login';
-import PrivateRoute from './components/PrivateRoute';
-import Dashboard from './components/Dashboard';
+// import PrivateRoute from './components/PrivateRoute';
+// import Dashboard from './components/Dashboard';
 import NotFound from './components/NotFound';
 
 const App = () => {
