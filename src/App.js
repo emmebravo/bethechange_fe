@@ -9,18 +9,22 @@ import Login from './components/Login';
 // import Dashboard from './components/Dashboard';
 import NotFound from './components/NotFound';
 
+import { Container } from '@mui/system';
+
 const App = () => {
   return (
     <Router>
       <div className='App'>
         <Navbar />
-        <Routes>
-          <Route exact path='/' element={<Home />} />
-          <Route exact path='/register' element={<Register />} />
-          <Route exact path='/login' element={<Login />} />
-          {/* <PrivateRoute exact path='dashboard' element={<Dashboard />} /> */}
-          <Route path='*' element={<NotFound />} />
-        </Routes>
+        <Container>
+          <Routes>
+            <Route exact path='/' element={<Home />} />
+            <Route exact path='/register' element={<Register />} />
+            <Route exact path='/login' element={<Login />} />
+            {/* <PrivateRoute exact path='dashboard' element={<Dashboard />} /> */}
+            <Route path='*' element={<NotFound />} />
+          </Routes>
+        </Container>
       </div>
     </Router>
   );
