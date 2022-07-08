@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import ArrowBackIosNewRoundedIcon from '@mui/icons-material/ArrowBackIosNewRounded';
+
 const Login = () => {
   const [login, setLogin] = useState({
     email: '',
@@ -26,8 +28,7 @@ const Login = () => {
       <div className='row'>
         <div className='col s8 offset-s2'>
           <Link to='/' className='btn-flat waves-effect'>
-            <i className='material-symbols-outlined left'>arrow_back</i> back
-            home
+            <ArrowBackIosNewRoundedIcon /> back home
           </Link>
           <div className='col s12'>
             <h4>Login to BtC</h4>

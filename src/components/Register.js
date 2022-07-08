@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import ArrowBackIosNewRoundedIcon from '@mui/icons-material/ArrowBackIosNewRounded';
+import { Typography } from '@mui/material';
+
 const Register = () => {
   const [register, setRegister] = useState({
     name: '',
@@ -33,9 +36,10 @@ const Register = () => {
           </Link>
           <div className='col s12'>
             <h4>Register to be part of BtC</h4>
-            <p className='grey-text text-darken-1'>
+            <Typography>
+              <ArrowBackIosNewRoundedIcon />
               Already have an account? <Link to='/login'>Log in</Link>
-            </p>
+            </Typography>
           </div>
           <form onSubmit={handleSubmit}>
             <input
