@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Button, Input } from '@mui/material';
 
 import ArrowBackIosNewRoundedIcon from '@mui/icons-material/ArrowBackIosNewRounded';
 
@@ -24,37 +25,34 @@ const Login = () => {
   };
 
   return (
-    <div className='container' style={{ paddingTop: '12px' }}>
-      <div className='row'>
-        <div className='col s8 offset-s2'>
-          <Link to='/' className='btn-flat waves-effect'>
-            <ArrowBackIosNewRoundedIcon /> back home
-          </Link>
-          <div className='col s12'>
-            <h4>Login to BtC</h4>
-            <p className='grey-text text-darken-1'>
-              Do not have an account? <Link to='/register'>Register</Link>
-            </p>
-          </div>
-          <form onSubmit={handleSubmit}>
-            <input
-              type='email'
-              placeholder='email'
-              name='email'
-              value={login.email}
-              onChange={handleLogin}
-            />
-            <input
-              type='password'
-              placeholder='password'
-              name='password'
-              value={login.password}
-              onChange={handleLogin}
-            />
-            <button>submit</button>
-          </form>
-        </div>
+    <div>
+      <ArrowBackIosNewRoundedIcon />
+      <Button to={'/'} component={Link}>
+        back home
+      </Button>
+      <div>
+        <h4>Login to BtC</h4>
+        <p>
+          Do not have an account? <Link to='/register'>Register</Link>
+        </p>
       </div>
+      <form onSubmit={handleSubmit}>
+        <Input
+          type='email'
+          placeholder='email'
+          name='email'
+          value={login.email}
+          onChange={handleLogin}
+        />
+        <Input
+          type='password'
+          placeholder='password'
+          name='password'
+          value={login.password}
+          onChange={handleLogin}
+        />
+        <Button>submit</Button>
+      </form>
     </div>
   );
 };
